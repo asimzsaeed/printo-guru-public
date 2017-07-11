@@ -1,0 +1,177 @@
+$primary-bg-color: #65c178;
+$primary-bg-color-light: lighten($primary-bg-color, 20);
+
+.product-container{
+  .product-summary{
+    padding: 15px;
+    &.affix{
+      float: right;
+      right: 37px;
+      top: 52px;
+    }
+  .price-box{
+    padding:5px 15px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
+    .label-price{
+      color: #65c178;
+      font-size: 28px;
+      line-height: 40px;
+      font-weight: 600;
+    }
+    .new-price{
+      float: right;
+      font-size: 28px;
+    }
+    .include-vat{
+
+    }
+    &.small{
+      .label-price{
+        font-size: 18px;
+        line-height: 40px;
+        font-weight: 600;
+      }
+      .new-price{
+        font-size: 18px;
+        line-height: 40px;
+        font-weight: 600;
+      }
+    }
+    }
+  }
+
+  aside{
+    margin-top: 0;
+  }
+
+  .usefull-product-slide{
+    padding-bottom: 10px!important;
+    ul{
+      li{
+        border:none;
+        padding:5px 10px;
+        font-weight: bold;
+        span{
+          color: #f0ad4e;
+          padding: 0 10px;
+          cursor:pointer;
+        }
+      }
+    }
+  }
+  .job-setting-title{
+    color: #ffa200;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .quantity-container{
+    .btn{
+      border-radius: 1px;
+      min-height: 80px;
+    }
+  }
+  .btn-justified{
+    width:100%;
+  }
+  .dropdown{
+    .btn-select{
+      padding:0;
+    }
+    .box-content {
+      border:none;
+      position: relative;
+      padding: 10px;
+      background: #ffffff;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      min-height: 85px;
+      background-color: $primary-bg-color;
+      &.shadow{
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 1px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 1px rgba(0, 0, 0, 0.05);
+        -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 1px rgba(0, 0, 0, 0.05);
+      }
+      &:hover{
+        background-color:$primary-bg-color-light;
+      }
+      p{
+        font-size:11px;
+        white-space: normal;
+      }
+
+      .statistics-box{
+        padding-top: 5px;
+        min-height: 30px;
+        text-align: center;
+        color:#ffffff;
+        .title {
+          font-size:22px;
+        }
+        &.with-icon {
+          position: relative;
+          padding-left: 60px;
+          .ico{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 42px;
+            height: 42px;
+            line-height: 65px;
+            text-align: center;
+            font-size: 42px;
+            opacity:0.6;
+          }
+          .ico-text{
+            font-size: 18px;
+            float:left;
+            margin-left:-54px;
+            margin-top:25px;
+
+          }
+        }
+      }
+    }
+
+    .dropdown-menu {
+      padding:0px;
+      width: 100%;
+      li.box-content {
+        cursor: pointer;
+        background-color: $primary-bg-color-light;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        border-bottom: 1px solid #fff;
+        &:last-child{
+          border:none;
+        }
+        &:hover{
+          background-color: $primary-bg-color;
+        }
+        .statistics-box {
+          &.with-icon {
+            padding-left: 40px;
+            .ico{
+              width: 40px;
+              height: 40px;
+              line-height: 40px;
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .my-drop-zone { border: dotted 3px lightgray; }
+  .nv-file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */
+  .another-file-over-class { border: dotted 3px green; }
+
+}
+
+#scrollUp{
+  display: none;
+}

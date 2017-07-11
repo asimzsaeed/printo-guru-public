@@ -1,0 +1,229 @@
+{
+    "application": {
+        "name": "Printo Guru Gateway changes",
+        "title": "We Print",
+        "description": "",
+        "version": "1.0",
+        "seo": ""
+    },
+    "currency" : "£",
+    "main_menu" : [
+        {
+            "name": "Flyers",
+            "path": "",
+            "items": [
+                {
+                    "name": "All Flyers",
+                    "path": "",
+                    "image":"assets/img/menu/clothing_hover.png"
+                },
+                {
+                    "name": "A5 Flyers",
+                    "path": "product/flyers-a5",
+                    "image":"assets/img/menu/clothing_hover.png"
+                }
+            ]
+        },
+        {
+            "name": "Poster",
+            "path": "",
+            "items": [
+                {
+                    "name": "All Poster",
+                    "path": "",
+                    "image":"assets/img/menu/clothing_hover.png"
+                },
+                {
+                    "name": "A5 Poster",
+                    "path": "",
+                    "image":"assets/img/menu/clothing_hover.png"
+                }
+            ]
+        }
+    ],
+    "paper_size": [
+        {
+            "type": "flyers",
+            "sizes" :[
+                {"name": "a3", "desc" : "a3 size"},
+                {"name": "a4", "desc" : "a4 size"},
+                {"name": "a5", "desc" : "a5 size"},
+                {"name": "a6", "desc" : "a6 size"},
+                {"name": "a7", "desc" : "a7 size"},
+                {"name": "dl", "desc" : "dl size"}
+            ]
+        },
+        {
+            "type": "poster",
+            "sizes" :[
+                {"name": "a3", "desc" : "a3 size"},
+                {"name": "a4", "desc" : "a4 size"}
+            ]
+        }
+    ],
+    "printed_sides" : [
+        { "id": "printed_sides_single", "name": "Single Sided", "desc" : "Single Sided desc"},
+        { "id": "printed_sides_double", "name": "Double Sides", "desc" : "Double Sides desc"}
+    ],
+
+    "finish_types" : [
+        { "id": "finish_no_lamination", "name": "No Lamination", "desc" : "No Lamination desc"},
+        { "id": "finish_matt_lamination", "name": "Matt Lamination", "desc" : "Matt Lamination desc"},
+        { "id": "finish_gross_lamination", "name": "Gross Lamination", "desc" : "Gross Lamination desc"}
+    ],
+    "paper_types" : [
+        { "id": "paper_type_economy_130gsm_silk", "name": "Economy 130gsm Silk", "desc" : "Economy 130gsm Silk"},
+        { "id": "paper_type_standard_250gsm_silk", "name": "Standard 250gsm Silk", "desc" : "Standard 250gsm Silk"}
+    ],
+    "service_type": [
+        { "id": "service_type_saver", "name": "Saver", "desc":"Deliver in 7 days " , "process_days":"7" } ,
+        { "id": "service_type_express", "name": "Express",  "desc":"Deliver in 4 days " , "process_days":"4" } ,
+        { "id": "service_type_fast_track", "name": "Fast Track",  "desc":"Deliver in 2 days " , "process_days":"2" }
+    ],
+    "products" : [{
+        "id": "flyers-a5",
+        "type":"flyers",
+        "size":"a5",
+        "name": "A5 Flyers & Leaflets",
+        "description":"<p>When it comes to our Flyers and Leaflets, A5 is the Rolls Royce of pocket-size products. With a glorious capacity to showcase your design, you’ll easily blast the word out. They’re perfect for the world of promotions; from club nights and festival flyers, to even advertising high street deals.</p> <p>Add your own design to the party, or choose one of our terrific templates. Pick the perfect paper, add a fabulous finish from one of our four options, and choose from single or double sided.</p>",
+        "specification": [
+            "Size : A5 (21.0 x 14.8 cm or 21.6 x 15.4 cm with bleed)",
+            "Print : Four colour process (CMYK)",
+            "WStock : Silk paper"
+        ],
+        "slide_images":[],
+        "configuration" :{
+            "design" : {
+                "price" : 60
+            },
+            "paper_types" : ["paper_type_economy_130gsm_silk","paper_type_standard_250gsm_silk"],
+            "printed_sides" : ["printed_sides_single", "printed_sides_double" ],
+            "finish_types" : ["finish_no_lamination", "finish_matt_lamination","finish_gross_lamination"],
+            "pricing" : [
+                {
+                    "quantity": 100,
+                    "price": 10,
+                    "default": true,
+                    "special_offer": false,
+                    "special_offer_price": 10,
+                    "add_on" :{
+                        "artwork_cost" : 60,
+                        "printed_sides_single": 0,
+                        "printed_sides_double": 3,
+                        "paper_type_economy_130gsm_silk" : 0,
+                        "paper_type_standard_250gsm_silk": 2,
+                        "service_type_saver" : 0,
+                        "service_type_express": 4,
+                        "service_type_fast_track": 10,
+                        "finish_no_lamination": 0,
+                        "finish_matt_lamination": 8,
+                        "finish_gross_lamination": 10
+                    }
+                },
+                {
+                    "quantity": 250,
+                    "price": 11,
+                    "add_on" :{
+                        "artwork_cost" : 60,
+                        "printed_sides_single": 0,
+                        "printed_sides_double": 4,
+                        "paper_type_economy_130gsm_silk" : 0,
+                        "paper_type_standard_250gsm_silk": 4,
+                        "service_type_saver" : 0,
+                        "service_type_express": 4,
+                        "service_type_fast_track": 10,
+                        "finish_no_lamination": 0,
+                        "finish_matt_lamination": 12,
+                        "finish_gross_lamination": 12
+                    }
+                },
+                {
+                    "quantity": 500,
+                    "price": 17,
+                    "add_on" :{
+                        "artwork_cost" : 60,
+                        "printed_sides_single": 0,
+                        "printed_sides_double": 8,
+                        "paper_type_economy_130gsm_silk" : 0,
+                        "paper_type_standard_250gsm_silk": 8,
+                        "service_type_saver" : 0,
+                        "service_type_express": 4,
+                        "service_type_fast_track": 10,
+                        "finish_no_lamination": 0,
+                        "finish_matt_lamination": 24,
+                        "finish_gross_lamination": 24
+                    }
+                },
+                {
+                    "quantity": 1000,
+                    "price": 25,
+                    "add_on" :{
+                        "artwork_cost" : 60,
+                        "printed_sides_single": 0,
+                        "printed_sides_double": 12,
+                        "paper_type_economy_130gsm_silk" : 0,
+                        "paper_type_standard_250gsm_silk": 4,
+                        "service_type_saver" : 0,
+                        "service_type_express": 4,
+                        "service_type_fast_track": 10,
+                        "finish_no_lamination": 0,
+                        "finish_matt_lamination": 38,
+                        "finish_gross_lamination": 38
+                    }
+                },
+                {
+                    "quantity": 2000,
+                    "price": 37,
+                    "add_on" :{
+                        "artwork_cost" : 60,
+                        "printed_sides_single": 0,
+                        "printed_sides_double": 25,
+                        "paper_type_economy_130gsm_silk" : 0,
+                        "paper_type_standard_250gsm_silk": 12,
+                        "service_type_saver" : 0,
+                        "service_type_express": 4,
+                        "service_type_fast_track": 10,
+                        "finish_no_lamination": 0,
+                        "finish_matt_lamination": 120,
+                        "finish_gross_lamination": 120
+                    }
+                },
+                {
+                    "quantity": 5000,
+                    "price": 46,
+                    "add_on" :{
+                        "artwork_cost" : 60,
+                        "printed_sides_single": 0,
+                        "printed_sides_double": 29,
+                        "paper_type_economy_130gsm_silk" : 0,
+                        "paper_type_standard_250gsm_silk": 22,
+                        "service_type_saver" : 0,
+                        "service_type_express": 4,
+                        "service_type_fast_track": 10,
+                        "finish_no_lamination": 0,
+                        "finish_matt_lamination": 160,
+                        "finish_gross_lamination": 160
+                    }
+                },
+                {
+                    "quantity": 10000,
+                    "price": 65,
+                    "add_on" :{
+                        "artwork_cost" : 60,
+                        "printed_sides_single": 0,
+                        "printed_sides_double": 32,
+                        "paper_type_economy_130gsm_silk" : 0,
+                        "paper_type_standard_250gsm_silk": 30,
+                        "service_type_saver" : 0,
+                        "service_type_express": 4,
+                        "service_type_fast_track": 10,
+                        "finish_no_lamination": 0,
+                        "finish_matt_lamination": 240,
+                        "finish_gross_lamination": 250
+                    }
+                }
+
+            ]
+        }
+    }]
+}

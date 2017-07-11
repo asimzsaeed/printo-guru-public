@@ -1,0 +1,89 @@
+{
+  "project": {
+    "version": "1.0.0-beta.20-4",
+    "name": "printoguru"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico",
+        "../server/app.constants.json",
+        "../server/gcloud/com-vizob-printo-guru-b4ab3254d2c5.json"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.json",
+      "prefix": "app",
+      "mobile": false,
+      "styles": [
+        "../node_modules/normalize.css/normalize.css",
+        "vendor/bootsrap-custom/css/bootstrap.css",
+        "../node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
+        "../node_modules/font-awesome/css/font-awesome.min.css",
+        "../node_modules/animate.css/animate.min.css",
+        "../node_modules/fancybox/dist/css/jquery.fancybox.css",
+        "vendor/custom-slider/css/nivo-slider.css",
+        "vendor/custom-slider/css/preview.css",
+        "css/normalize.css",
+        "css/main.css",
+        "css/style.css",
+        "css/responsive.css",
+        "app.css"
+      ],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min",
+        "vendor/bootsrap-custom/bootstrap.min.js",
+        "vendor/custom-slider/js/jquery.nivo.slider.js",
+        "../src/assets/js/jquery.mixitup.min.js",
+        "../node_modules/fancybox/dist/js/jquery.fancybox.pack.js",
+        "../src/assets/js/jquery-price-slider.js",
+        "../node_modules/owl.carousel/dist/owl.carousel.min.js",
+        "../node_modules/waypoints/src/waypoint.js",
+        "../src/assets/js/jquery.counterup.min.js",
+        "../src/assets/js/jquery.scrollUp.js",
+        "../src/assets/js/jquery.elevateZoom-3.0.8.min.js",
+        "../src/assets/js/jquery.meanmenu.js",
+        "../src/assets/js/wow.js",
+        "../src/assets/js/plugins.js",
+        "js/main.js"
+      ],
+      "environments": {
+        "source": "environments/environment.ts",
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "addons": [],
+  "packages": [],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "prefixInterfaces": false,
+    "inline": {
+      "style": false,
+      "template": false
+    },
+    "spec": {
+      "class": false,
+      "component": true,
+      "directive": true,
+      "module": false,
+      "pipe": true,
+      "service": true
+    }
+  }
+}

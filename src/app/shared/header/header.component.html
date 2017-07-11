@@ -1,0 +1,123 @@
+<div class="header-area" #header>
+  <div class="header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 col-sm-6 col-xs-12">
+          <div class="single-drop">
+            <div class="block-header">
+              <div class="logo"><a routerLink="start"> <img src="assets/img/logo.png"></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7 col-sm-6 col-xs-12">
+          <div class="single-menu">
+            <nav>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a class="lastbdr" href="#">My Account</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-bottom" data-spy="affix" data-offset-top="100">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <!-- main-menu start -->
+          <div class="main-menu">
+            <nav>
+              <ul>
+                <li *ngFor="let menu of main_menu;">
+                  <a routerLink="{{menu.path}}" routerLinkActive="active">{{menu.name}}</a>
+                  <div class="mega-menu">
+
+                    <div class="mega-catagory" *ngFor="let item of menu.items;">
+                      <a href="{{item.path}}">
+                        <img src="{{item.image}}" alt="" />
+                        <span>{{item.name}}</span>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- main-menu end -->
+          <!-- mobile-menu-area start -->
+            <div class="mobile-menu-area">
+                <div class="container mean-container"><div class="mean-bar"><a href="#nav" class="meanmenu-reveal" style="right: 0px; left: auto; text-align: center; text-indent: 0px; font-size: 18px;"><span></span><span></span><span></span></a><nav class="mean-nav">
+                    <ul style="display: none;">
+                        <li><a href="index.html">HOME</a>
+                            <ul style="display: none;">
+                                <li><a href="index.html">Home-01</a></li>
+                                <li><a href="index-2.html">Home-02</a></li>
+                                <li><a href="index-3.html">Home-03</a></li>
+                                <li><a href="index-4.html">Home-04</a></li>
+                            </ul>
+                            <a class="mean-expand" href="#" style="font-size: 18px">+</a></li>
+                        <li><a href="#">All Stores</a></li>
+                        <li><a href="#">New Arrival</a></li>
+                        <li><a href="#">Best Offer</a></li>
+                        <li><a href="#">Hot Sale</a></li>
+                        <li><a href="#">Fashion Trande</a></li>
+                        <li><a href="#">PAGES</a>
+                            <ul style="display: none;">
+                                <li><a href="cart.html">Cart</a></li>
+                                <li><a href="checkout.html">Check out</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="single-product.html">Single Product</a></li>
+                                <li><a href="wishlist.html">Wish List</a></li>
+                                <li><a href="my-account.html">My Account</a></li>
+                                <li><a href="404.html">Error 404</a></li>
+                            </ul>
+                            <a class="mean-expand" href="#" style="font-size: 18px">+</a></li>
+                        <li><a href="about-us.html">About US</a></li>
+                        <li class="mean-last"><a href="contact.html">Contact US</a></li>
+                    </ul>
+                </nav></div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="mean-push"></div><nav id="dropdown" style="display: none;">
+                            <ul>
+                                <li><a href="index.html">HOME</a>
+                                    <ul>
+                                        <li><a href="index.html">Home-01</a></li>
+                                        <li><a href="index-2.html">Home-02</a></li>
+                                        <li><a href="index-3.html">Home-03</a></li>
+                                        <li><a href="index-4.html">Home-04</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">All Stores</a></li>
+                                <li><a href="#">New Arrival</a></li>
+                                <li><a href="#">Best Offer</a></li>
+                                <li><a href="#">Hot Sale</a></li>
+                                <li><a href="#">Fashion Trande</a></li>
+                                <li><a href="#">PAGES</a>
+                                    <ul>
+                                        <li><a href="cart.html">Cart</a></li>
+                                        <li><a href="checkout.html">Check out</a></li>
+                                        <li><a href="shop.html">Shop</a></li>
+                                        <li><a href="single-product.html">Single Product</a></li>
+                                        <li><a href="wishlist.html">Wish List</a></li>
+                                        <li><a href="my-account.html">My Account</a></li>
+                                        <li><a href="404.html">Error 404</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about-us.html">About US</a></li>
+                                <li><a href="contact.html">Contact US</a></li>
+                            </ul>
+                        </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <!--mobile menu area end-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

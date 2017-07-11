@@ -1,0 +1,228 @@
+<div class="product-container" #productcontainer>
+    <div class="container">
+        <div class="row" *ngIf="!uploadArtwork">
+            <div class="col-md-9 col-sm-9 nopadding-right">
+                <div class="ambit-key">
+                <div class="product-single-details pt40">
+                    <div class="col-md-5 col-sm-5 col-xs-12">
+                        <div class="imgs-area">
+                            <img id="zoom_03" src="assets/img/product/small/02.jpg" data-zoom-image="assets/img/product/large/02.jpg" alt="">
+                            <!--<div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div id="gallery_01">
+
+                                        <div class="p-c">
+                                            <a href="#" data-image="assets/img/product/small/01.jpg" data-zoom-image="assets/img/product/large/01.jpg">
+                                                <img class="zoom_03" src="assets/img/product/small/01.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="p-c">
+                                            <a href="#" data-image="assets/img/product/small/02.jpg" data-zoom-image="assets/img/product/large/02.jpg">
+                                                <img class="zoom_03" src="assets/img/product/small/02.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="p-c">
+                                            <a href="#" data-image="assets/img/product/small/03.jpg" data-zoom-image="assets/img/product/large/03.jpg">
+                                                <img class="zoom_03" src="assets/img/product/small/03.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="p-c">
+                                            <a href="#" data-image="assets/img/product/small/04.jpg" data-zoom-image="assets/img/product/large/04.jpg">
+                                                <img class="zoom_03" src="assets/img/product/small/04.jpg" alt="">
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-7 col-xs-12">
+                        <div class="product-details-content std">
+                            <h3>{{product.name}}</h3>
+                            <div [innerHTML]="product.description"></div>
+                            <p><strong>Specification</strong></p>
+                            <ul>
+                                <li *ngFor="let spec of product.specification;">{{spec}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="clearfix"></div>
+                <div class="row  p20">
+                    <div class="col-md-6 col-sm-6 col-xs-12" *ngIf="printed_sides">
+                        <span class="job-setting-title">Printed Sides</span>
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle btn-lg btn-block btn-select" type="button" data-toggle="dropdown">
+                                <div class="box-content bg-success shadow">
+                                    <div class="statistics-box with-icon">
+                                        <i class="ico small fa fa-object-group"></i>
+                                        <span class="title">{{job.printed_side.name}}</span>
+                                        <p>{{job.printed_side.desc}}</p>
+                                    </div>
+                                </div>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <template ngFor let-printedSide [ngForOf]="printed_sides">
+                                    <li  class="box-content"  *ngIf="printedSide.id != job.printed_side.id"  (click)="setJobPrintedSide(printedSide)">
+                                        <div class="statistics-box">
+                                            <span class="title">{{printedSide.name}}</span>
+                                        </div>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 nopadding-left" *ngIf="paper_types">
+                        <span class="job-setting-title">What paper type would you like?</span>
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle btn-lg btn-block btn-select" type="button" data-toggle="dropdown">
+                                <div class="box-content bg-success shadow">
+                                    <div class="statistics-box with-icon">
+                                        <i class="ico small fa fa-file"></i>
+                                        <span class="title">{{job.paper_type.name}}</span>
+                                        <p>{{job.paper_type.desc}}</p>
+                                    </div>
+                                </div>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <template ngFor let-paperType [ngForOf]="paper_types">
+                                    <li  class="box-content"  *ngIf="paperType.id != job.paper_type.id"  (click)="setJobPaperType(paperType)">
+                                        <div class="statistics-box">
+                                            <span class="title">{{paperType.name}}</span>
+                                        </div>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row  p20">
+                    <div class="col-md-6 col-sm-6 col-xs-12"  *ngIf="finish_types">
+                        <span class="job-setting-title">What finish would you like?</span>
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle btn-lg btn-block btn-select" type="button" data-toggle="dropdown">
+                                <div class="box-content bg-success shadow">
+                                    <div class="statistics-box with-icon">
+                                        <i class="ico small fa  fa-empire"></i>
+                                        <span class="title">{{job.finish_type.name}}</span>
+                                        <p>{{job.finish_type.desc}}</p>
+                                    </div>
+                                </div>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <template ngFor let-finishType [ngForOf]="finish_types">
+                                    <li  class="box-content"  *ngIf="finishType.id != job.finish_type.id"  (click)="setJobFinishType(finishType)">
+                                        <div class="statistics-box">
+                                            <span class="title">{{finishType.name}}</span>
+                                        </div>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12"  *ngIf="service_type">
+                        <span class="job-setting-title">What finish would you like?</span>
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle btn-lg btn-block btn-select" type="button" data-toggle="dropdown">
+                                <div class="box-content bg-success shadow">
+                                    <div class="statistics-box with-icon">
+                                        <i class="ico small fa fa-truck"></i>
+                                        <span class="title">{{job.service_type.name}}</span>
+                                        <p>{{job.service_type.desc}}</p>
+                                    </div>
+                                </div>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <template ngFor let-serviceType [ngForOf]="service_type">
+                                    <li  class="box-content"  *ngIf="serviceType.id != job.service_type.id"  (click)="setJobServiceType(serviceType)">
+                                        <div class="statistics-box">
+                                            <span class="title">{{serviceType.name}}</span>
+                                        </div>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </div>
+
+                    </div>
+                <div class="p20 quantity-container">
+                    <span class="job-setting-title">Chose Quantity</span>
+                    <div class="row nomargin-left nomargin-right">
+                        <div class="col-md-2 col-sm-2 col-xs-6 nopadding"   *ngFor="let price of pricing;">
+                            <button type="button" class="btn btn-default btn-lg btn-justified" (click)="setJobQuantity(price)" [ngClass]="{'active': (job.pricing.quantity == price.quantity)}">{{price.quantity}}
+                                <p>{{currency}}{{price.price + getJobAddOnsPriceByQuanity(price.add_on)}}</p>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 nopadding-left product-summary" data-spy="affix" data-offset-top="97" data-offset-bottom="320">
+                 <aside>
+                    <div class="usefull-product-slide">
+                        <div class="box-title banner-box p15">
+                            <h2 class="bold">Product Summary</h2>
+                            <h5>{{(jobReturn$ | async)?.id}}</h5>
+                        </div>
+                        <div class="nopadding">
+                            <ul class="list-group nomargin">
+                                <li class="list-group-item">
+                                    <span>Product:</span> {{job.size}} - {{job.type}}
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Paper:</span>{{getJobPaperType(job.paper_type)}}
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Sides:</span>{{job.printed_side.name}}
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Finish:</span>{{getJobFinishType(job.finish_type)}}
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Service Type:</span>{{job.service_type.name}}
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Quantity:</span>{{job.pricing.quantity}}
+                                </li>
+                            </ul>
+                            <div class="price-box small" *ngIf="!job.own_design">
+                                <span class="label-price">Job Cost</span>
+                                <span class="new-price f18">{{currency}}{{job.pricing.price}}</span>
+                            </div>
+                            <div class="p10">
+                                <a href="#">
+                                    Delivery information
+                                </a>
+                            </div>
+                            <blockquote class="p10">
+                                <p>Order and approve your artwork in the next 16hr 51min to receive your print on Thursday 5th January</p>
+                            </blockquote>
+                            <div class="price-box">
+                                <span class="label-price">Price</span>
+                                <span class="new-price">{{currency}}{{getJobTotalCost()}}</span>
+                            </div>
+                            <div class="vat-include">
+                                (Includes VAT)
+                            </div>
+                            <div class="p15">
+                                <div class="btn-group btn-group-justified" role="group">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-warning btn-lg" (click)="addToBasket()">Add to basket</button>
+                                </div>
+                            </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+        <div class="row" *ngIf="uploadArtwork">
+            Upload artwork
+        </div>
+    </div>
+
+</div>

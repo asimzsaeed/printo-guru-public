@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+.bt-lg-80{
+    height: 65px;
+}
+
+.btn-default:hover, .btn-default:focus,.btn-default.active {
+    background-color: #65c178;
+    border-color: #65c178;
+    color: #fff;
+}
+
+.btn p{
+    font-size: 14px;
+    margin: 0px;
+}
+
+.bold{
+    font-weight: bold;
+}
